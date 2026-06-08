@@ -1,0 +1,14 @@
+[Unit]
+Description=MyApp Service
+After=network.target
+
+[Service]
+Type=simple
+User=myapp
+WorkingDirectory=/opt/myapp
+ExecStart=/opt/myapp/main
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
